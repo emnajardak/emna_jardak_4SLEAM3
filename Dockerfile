@@ -1,9 +1,6 @@
- FROM eclipse-temurin:17-jdk-alpine
+#choisir une image de base
+FROM alpine:latest
 
-WORKDIR /app
+# Commande à exécuter par défaut
+CMD ["echo", "Hello Docker"]
 
-COPY target/student-management-0.0.1-SNAPSHOT.jar app.jar
-
-EXPOSE 8089
-
-ENTRYPOINT ["java", "-jar", "app.jar"]
